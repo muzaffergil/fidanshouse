@@ -1,16 +1,16 @@
 @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&family=DM+Sans:wght@300;400;500;600&display=swap');
 
 :root {
-  --primary: #c8472a;
-  --primary-light: #e05a3a;
-  --primary-dark: #a33520;
-  --charcoal: #1e1e1e;
-  --dark: #2c2c2c;
-  --mid: #555;
-  --muted: #888;
-  --border: #e8e8e8;
-  --bg: #ffffff;
-  --bg-soft: #f9f7f5;
+  --primary: #b8922a;
+  --primary-light: #d4aa45;
+  --primary-dark: #8a6d1a;
+  --charcoal: #2a1f0f;
+  --dark: #3a2e1a;
+  --mid: #6b5c3e;
+  --muted: #9e8d72;
+  --border: #ead9c0;
+  --bg: #fffdf9;
+  --bg-soft: #fdf5eb;
   --bg-card: #ffffff;
   --gold: #c9a96e;
   --shadow-sm: 0 2px 8px rgba(0,0,0,0.06);
@@ -86,22 +86,20 @@ ul { list-style: none; }
 }
 
 /* Logo */
-.logo { display: flex; align-items: center; gap: 12px; flex-shrink: 0; }
-.logo-mark {
-  width: 40px; height: 40px;
-  background: var(--primary);
-  border-radius: 10px;
-  display: flex; align-items: center; justify-content: center;
-  font-family: 'Playfair Display', serif;
-  font-size: 20px; color: white; font-weight: 700;
+.logo { display: flex; align-items: center; flex-shrink: 0; }
+.logo-img {
+  height: 52px;
+  width: auto;
+  object-fit: contain;
+  border-radius: 6px;
 }
-.logo-text { display: flex; flex-direction: column; line-height: 1.1; }
-.logo-name {
-  font-family: 'Playfair Display', serif;
-  font-size: 18px; font-weight: 700;
-  color: var(--charcoal); letter-spacing: -0.01em;
+.footer-logo-img {
+  height: 60px;
+  width: auto;
+  object-fit: contain;
+  border-radius: 6px;
+  margin-bottom: 4px;
 }
-.logo-sub { font-size: 10px; letter-spacing: 0.18em; text-transform: uppercase; color: var(--muted); }
 
 /* Nav */
 nav { display: flex; align-items: center; justify-content: center; }

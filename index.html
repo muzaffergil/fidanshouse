@@ -1,0 +1,641 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Fidan's House – Evinizi Güzelleştirin</title>
+  <meta name="description" content="Fidan's House – Kaliteli mutfak araçları, temizlik ürünleri ve ev organizasyon ürünleri. Uygun fiyat, hızlı teslimat." />
+  <link rel="stylesheet" href="style.css" />
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' rx='20' fill='%23c8472a'/><text y='.9em' font-size='70' x='15' fill='white' font-family='Georgia'>F</text></svg>" />
+</head>
+<body>
+
+<!-- ═══════════════════════════════════ TOPBAR -->
+<div class="topbar">
+  <div class="topbar-inner">
+    <div class="topbar-left">
+      <span class="topbar-item">
+        <span class="icon">📞</span>
+        <a href="tel:05385120042">0 538 512 00 42</a>
+      </span>
+      <span class="topbar-divider"></span>
+      <span class="topbar-item">
+        <span class="icon">✉</span>
+        <a href="mailto:info@fidanshouse.com">info@fidanshouse.com</a>
+      </span>
+      <span class="topbar-divider"></span>
+      <span class="topbar-item">
+        <span class="icon">📦</span>
+        Minimum sipariş: <strong style="color:rgba(255,255,255,0.9);margin-left:3px">₺185</strong>
+      </span>
+      <span class="topbar-divider"></span>
+      <span class="topbar-item">
+        <span class="icon">🚚</span>
+        <strong style="color:rgba(255,255,255,0.9)">₺6.500</strong>&nbsp;üzeri kargo bedava
+      </span>
+    </div>
+    <div class="topbar-right">
+      <a href="#">Giriş Yap</a>
+      <span class="topbar-divider"></span>
+      <a href="#">Üye Ol</a>
+    </div>
+  </div>
+</div>
+
+<!-- ═══════════════════════════════════ HEADER -->
+<header class="header">
+  <div class="header-inner">
+    <!-- Logo -->
+    <a href="index.html" class="logo">
+      <div class="logo-mark">F</div>
+      <div class="logo-text">
+        <span class="logo-name">fidan's house</span>
+        <span class="logo-sub">Home &amp; Living</span>
+      </div>
+    </a>
+
+    <!-- Nav -->
+    <nav>
+      <ul class="nav-list">
+        <li><a href="#" class="active">Anasayfa</a></li>
+        <li><a href="#">Tüm Ürünler</a></li>
+        <li><a href="#">Çok Satanlar</a></li>
+        <li><a href="#">Yeni Gelenler</a></li>
+        <li><a href="#" style="color:var(--primary)">İndirimli Ürünler</a></li>
+        <li><a href="#">Hakkımızda</a></li>
+        <li><a href="#">İletişim</a></li>
+      </ul>
+    </nav>
+
+    <!-- Actions -->
+    <div class="header-actions">
+      <button class="icon-btn" id="searchToggle" title="Ara">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
+      </button>
+      <a href="#" class="icon-btn" title="Sepetim">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M6 2L3 6v14a2 2 0 002 2h14a2 2 0 002-2V6l-3-4z"/><line x1="3" y1="6" x2="21" y2="6"/><path d="M16 10a4 4 0 01-8 0"/></svg>
+        <span class="cart-badge" id="cartBadge">0</span>
+      </a>
+      <button class="hamburger icon-btn" id="menuToggle" title="Menü">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </div>
+
+  <!-- Mobile Nav -->
+  <div class="mobile-nav" id="mobileNav">
+    <a href="#">Anasayfa</a>
+    <a href="#">Tüm Ürünler</a>
+    <a href="#">Çok Satanlar</a>
+    <a href="#">Yeni Gelenler</a>
+    <a href="#" style="color:var(--primary)">İndirimli Ürünler</a>
+    <a href="#">Hakkımızda</a>
+    <a href="#">İletişim</a>
+  </div>
+</header>
+
+<!-- ═══════════════════════════════════ SEARCH OVERLAY -->
+<div class="search-overlay" id="searchOverlay">
+  <div class="search-box">
+    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#aaa" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="flex-shrink:0"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
+    <input type="text" placeholder="Ürün ara... (örn: silikon kepçe, temizlik bezi)" id="searchInput" />
+    <button onclick="document.getElementById('searchOverlay').classList.remove('open')">Kapat</button>
+  </div>
+</div>
+
+<!-- ═══════════════════════════════════ HERO -->
+<section class="hero">
+  <div class="hero-bg"></div>
+  <div class="hero-pattern"></div>
+  <div class="hero-inner">
+    <div class="hero-content">
+      <div class="hero-eyebrow">✦ 400+ Ürün Çeşidi</div>
+      <h1 class="hero-title">
+        Evinizi<br/>
+        <em>Güzelleştirin</em>
+      </h1>
+      <p class="hero-subtitle">
+        Mutfaktan banyoya, temizlikten organizasyona — günlük hayatı kolaylaştıran kaliteli ürünler, uygun fiyatlarla.
+      </p>
+      <div class="hero-actions">
+        <a href="#products" class="btn-primary">
+          Alışverişe Başla
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+        </a>
+        <a href="#categories" class="btn-outline">Kategorileri Keşfet</a>
+      </div>
+      <div class="hero-stats">
+        <div>
+          <div class="hero-stat-num">400+</div>
+          <div class="hero-stat-label">Ürün Çeşidi</div>
+        </div>
+        <div>
+          <div class="hero-stat-num">5★</div>
+          <div class="hero-stat-label">Müşteri Puanı</div>
+        </div>
+        <div>
+          <div class="hero-stat-num">Hızlı</div>
+          <div class="hero-stat-label">Teslimat</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="hero-visual">
+      <div class="hero-card-stack">
+        <div class="hero-card hero-card-1 hero-card-bg-1">
+          <div class="hero-card-inner">
+            <div class="hero-card-icon">🍳</div>
+            <div class="hero-card-label">Mutfak</div>
+            <div class="hero-card-sub">150+ ürün</div>
+          </div>
+        </div>
+        <div class="hero-card hero-card-2 hero-card-bg-2">
+          <div class="hero-card-inner">
+            <div class="hero-card-icon">🏠</div>
+            <div class="hero-card-label">Ev Organizasyon</div>
+            <div class="hero-card-sub">80+ ürün</div>
+          </div>
+        </div>
+        <div class="hero-card hero-card-3 hero-card-bg-3">
+          <div class="hero-card-inner">
+            <div class="hero-card-icon">🧹</div>
+            <div class="hero-card-label">Temizlik</div>
+            <div class="hero-card-sub">120+ ürün</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════════════════════════ INFO STRIP -->
+<section class="info-strip">
+  <div class="info-strip-inner">
+    <div class="info-item reveal">
+      <div class="info-icon">🚚</div>
+      <div>
+        <div class="info-text-title">Ücretsiz Kargo</div>
+        <div class="info-text-sub">₺6.500 ve üzeri siparişlerde</div>
+      </div>
+    </div>
+    <div class="info-item reveal">
+      <div class="info-icon">🔒</div>
+      <div>
+        <div class="info-text-title">Güvenli Alışveriş</div>
+        <div class="info-text-sub">256-bit SSL şifreleme</div>
+      </div>
+    </div>
+    <div class="info-item reveal">
+      <div class="info-icon">💬</div>
+      <div>
+        <div class="info-text-title">WhatsApp Destek</div>
+        <div class="info-text-sub">7/24 müşteri hizmetleri</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════════════════════════ CATEGORIES -->
+<section class="section" id="categories">
+  <div class="section-inner">
+    <div class="section-header">
+      <h2 class="section-title">Kategoriler</h2>
+      <a href="#" class="section-link">Tümünü Gör →</a>
+    </div>
+    <div class="categories-grid">
+      <a href="#" class="category-card reveal">
+        <div class="cat-bg cat-bg-1"></div>
+        <div class="cat-overlay"></div>
+        <div class="cat-content">
+          <div class="cat-icon">🍴</div>
+          <div class="cat-name">Mutfak Araçları</div>
+          <div class="cat-count">150+ ürün</div>
+        </div>
+      </a>
+      <a href="#" class="category-card reveal">
+        <div class="cat-bg cat-bg-2"></div>
+        <div class="cat-overlay"></div>
+        <div class="cat-content">
+          <div class="cat-icon">🧽</div>
+          <div class="cat-name">Temizlik</div>
+          <div class="cat-count">120+ ürün</div>
+        </div>
+      </a>
+      <a href="#" class="category-card reveal">
+        <div class="cat-bg cat-bg-3"></div>
+        <div class="cat-overlay"></div>
+        <div class="cat-content">
+          <div class="cat-icon">📦</div>
+          <div class="cat-name">Ev Organizasyon</div>
+          <div class="cat-count">80+ ürün</div>
+        </div>
+      </a>
+      <a href="#" class="category-card reveal">
+        <div class="cat-bg cat-bg-4"></div>
+        <div class="cat-overlay"></div>
+        <div class="cat-content">
+          <div class="cat-icon">🧶</div>
+          <div class="cat-name">Tekstil</div>
+          <div class="cat-count">60+ ürün</div>
+        </div>
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════════════════════════ FEATURED PRODUCTS -->
+<section class="section" id="products" style="padding-top:0">
+  <div class="section-inner">
+    <div class="section-header">
+      <h2 class="section-title">Öne Çıkan <span>Ürünler</span></h2>
+      <a href="#" class="section-link">Tüm Ürünler →</a>
+    </div>
+    <div class="products-grid" id="featuredGrid">
+
+      <!-- 1 -->
+      <div class="product-card reveal">
+        <div class="product-image">
+          <div class="product-image-bg p-bg-clean">🧻</div>
+          <span class="product-badge">İndirim</span>
+          <div class="product-actions">
+            <button class="btn-action" title="Favorilere Ekle">♡</button>
+            <button class="btn-action" title="Hızlı Bakış">👁</button>
+          </div>
+        </div>
+        <div class="product-body">
+          <div class="product-name">Miss Clean 3'lü Tezgah Bezi</div>
+          <div class="product-price-row">
+            <span class="price-current">₺130</span>
+            <span class="price-original">₺135</span>
+            <span class="price-save">%4 İndirim</span>
+          </div>
+          <button class="btn-cart" onclick="addToCart(this)">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M6 2L3 6v14a2 2 0 002 2h14a2 2 0 002-2V6l-3-4z"/><line x1="3" y1="6" x2="21" y2="6"/><path d="M16 10a4 4 0 01-8 0"/></svg>
+            Sepete Ekle
+          </button>
+        </div>
+      </div>
+
+      <!-- 2 -->
+      <div class="product-card reveal">
+        <div class="product-image">
+          <div class="product-image-bg p-bg-kitchen">🥔</div>
+          <div class="product-actions">
+            <button class="btn-action" title="Favorilere Ekle">♡</button>
+            <button class="btn-action" title="Hızlı Bakış">👁</button>
+          </div>
+        </div>
+        <div class="product-body">
+          <div class="product-name">Patates Ezici Büyük Hazneli</div>
+          <div class="product-price-row">
+            <span class="price-current">₺160</span>
+          </div>
+          <button class="btn-cart" onclick="addToCart(this)">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M6 2L3 6v14a2 2 0 002 2h14a2 2 0 002-2V6l-3-4z"/><line x1="3" y1="6" x2="21" y2="6"/><path d="M16 10a4 4 0 01-8 0"/></svg>
+            Sepete Ekle
+          </button>
+        </div>
+      </div>
+
+      <!-- 3 -->
+      <div class="product-card reveal">
+        <div class="product-image">
+          <div class="product-image-bg p-bg-beauty">🪞</div>
+          <span class="product-badge">İndirim</span>
+          <div class="product-actions">
+            <button class="btn-action" title="Favorilere Ekle">♡</button>
+            <button class="btn-action" title="Hızlı Bakış">👁</button>
+          </div>
+        </div>
+        <div class="product-body">
+          <div class="product-name">Led Işıklı Makyaj Aynası</div>
+          <div class="product-price-row">
+            <span class="price-current">₺125</span>
+            <span class="price-original">₺145</span>
+            <span class="price-save">%14 İndirim</span>
+          </div>
+          <button class="btn-cart" onclick="addToCart(this)">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M6 2L3 6v14a2 2 0 002 2h14a2 2 0 002-2V6l-3-4z"/><line x1="3" y1="6" x2="21" y2="6"/><path d="M16 10a4 4 0 01-8 0"/></svg>
+            Sepete Ekle
+          </button>
+        </div>
+      </div>
+
+      <!-- 4 -->
+      <div class="product-card reveal">
+        <div class="product-image">
+          <div class="product-image-bg p-bg-kitchen">🍋</div>
+          <div class="product-actions">
+            <button class="btn-action" title="Favorilere Ekle">♡</button>
+            <button class="btn-action" title="Hızlı Bakış">👁</button>
+          </div>
+        </div>
+        <div class="product-body">
+          <div class="product-name">Chef Star Limon Sıkacağı</div>
+          <div class="product-price-row">
+            <span class="price-current">₺165</span>
+          </div>
+          <button class="btn-cart" onclick="addToCart(this)">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M6 2L3 6v14a2 2 0 002 2h14a2 2 0 002-2V6l-3-4z"/><line x1="3" y1="6" x2="21" y2="6"/><path d="M16 10a4 4 0 01-8 0"/></svg>
+            Sepete Ekle
+          </button>
+        </div>
+      </div>
+
+      <!-- 5 -->
+      <div class="product-card reveal">
+        <div class="product-image">
+          <div class="product-image-bg p-bg-cool">🥄</div>
+          <span class="product-badge new">Yeni</span>
+          <div class="product-actions">
+            <button class="btn-action" title="Favorilere Ekle">♡</button>
+            <button class="btn-action" title="Hızlı Bakış">👁</button>
+          </div>
+        </div>
+        <div class="product-body">
+          <div class="product-name">İvory Silikon 4'lü Set</div>
+          <div class="product-price-row">
+            <span class="price-current">₺300</span>
+          </div>
+          <button class="btn-cart" onclick="addToCart(this)">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M6 2L3 6v14a2 2 0 002 2h14a2 2 0 002-2V6l-3-4z"/><line x1="3" y1="6" x2="21" y2="6"/><path d="M16 10a4 4 0 01-8 0"/></svg>
+            Sepete Ekle
+          </button>
+        </div>
+      </div>
+
+      <!-- 6 -->
+      <div class="product-card reveal">
+        <div class="product-image">
+          <div class="product-image-bg p-bg-warm">🎒</div>
+          <div class="product-actions">
+            <button class="btn-action" title="Favorilere Ekle">♡</button>
+            <button class="btn-action" title="Hızlı Bakış">👁</button>
+          </div>
+        </div>
+        <div class="product-body">
+          <div class="product-name">Mega Everest Termos Çanta</div>
+          <div class="product-price-row">
+            <span class="price-current">₺250</span>
+          </div>
+          <button class="btn-cart" onclick="addToCart(this)">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M6 2L3 6v14a2 2 0 002 2h14a2 2 0 002-2V6l-3-4z"/><line x1="3" y1="6" x2="21" y2="6"/><path d="M16 10a4 4 0 01-8 0"/></svg>
+            Sepete Ekle
+          </button>
+        </div>
+      </div>
+
+      <!-- 7 -->
+      <div class="product-card reveal">
+        <div class="product-image">
+          <div class="product-image-bg p-bg-tool">🔪</div>
+          <div class="product-actions">
+            <button class="btn-action" title="Favorilere Ekle">♡</button>
+            <button class="btn-action" title="Hızlı Bakış">👁</button>
+          </div>
+        </div>
+        <div class="product-body">
+          <div class="product-name">Metal Hamur Erişte Kesici</div>
+          <div class="product-price-row">
+            <span class="price-current">₺70</span>
+          </div>
+          <button class="btn-cart" onclick="addToCart(this)">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M6 2L3 6v14a2 2 0 002 2h14a2 2 0 002-2V6l-3-4z"/><line x1="3" y1="6" x2="21" y2="6"/><path d="M16 10a4 4 0 01-8 0"/></svg>
+            Sepete Ekle
+          </button>
+        </div>
+      </div>
+
+      <!-- 8 -->
+      <div class="product-card reveal">
+        <div class="product-image">
+          <div class="product-image-bg p-bg-kitchen">🥣</div>
+          <div class="product-actions">
+            <button class="btn-action" title="Favorilere Ekle">♡</button>
+            <button class="btn-action" title="Hızlı Bakış">👁</button>
+          </div>
+        </div>
+        <div class="product-body">
+          <div class="product-name">Baysa Silikon Çırpıcı 2'li</div>
+          <div class="product-price-row">
+            <span class="price-current">₺65</span>
+          </div>
+          <button class="btn-cart" onclick="addToCart(this)">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M6 2L3 6v14a2 2 0 002 2h14a2 2 0 002-2V6l-3-4z"/><line x1="3" y1="6" x2="21" y2="6"/><path d="M16 10a4 4 0 01-8 0"/></svg>
+            Sepete Ekle
+          </button>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════════════════════════ PROMO BANNER -->
+<section class="promo-banner">
+  <div class="promo-inner">
+    <div class="promo-content">
+      <div class="promo-tag">✦ Özel Fırsat</div>
+      <h2 class="promo-title">₺6.500 Üzeri<br/>Kargo Bedava!</h2>
+      <p class="promo-sub">Toplu alışverişlerinizde hem tasarruf edin hem de ücretsiz kargo avantajından yararlanın.</p>
+    </div>
+    <div class="promo-cta">
+      <a href="#products" class="btn-primary">Hemen Alışveriş Yap</a>
+      <a href="#" class="btn-outline" style="color:rgba(255,255,255,0.8)">WhatsApp'tan Sipariş Ver</a>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════════════════════════ BESTSELLERS -->
+<section class="section bestsellers">
+  <div class="section-inner">
+    <div class="section-header">
+      <h2 class="section-title">Çok <span>Satanlar</span></h2>
+      <a href="#" class="section-link">Tümünü Gör →</a>
+    </div>
+    <div class="bestsellers-grid">
+
+      <div class="product-card reveal">
+        <div class="product-image">
+          <div class="product-image-bg p-bg-clean">🧤</div>
+          <span class="product-badge bestseller">⭐ Çok Satan</span>
+          <div class="product-actions">
+            <button class="btn-action" title="Favorilere Ekle">♡</button>
+            <button class="btn-action" title="Hızlı Bakış">👁</button>
+          </div>
+        </div>
+        <div class="product-body">
+          <div class="product-name">İthal Telli Ovma Eldiveni</div>
+          <div class="product-price-row">
+            <span class="price-current">₺20</span>
+          </div>
+          <button class="btn-cart" onclick="addToCart(this)">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M6 2L3 6v14a2 2 0 002 2h14a2 2 0 002-2V6l-3-4z"/><line x1="3" y1="6" x2="21" y2="6"/><path d="M16 10a4 4 0 01-8 0"/></svg>
+            Sepete Ekle
+          </button>
+        </div>
+      </div>
+
+      <div class="product-card reveal">
+        <div class="product-image">
+          <div class="product-image-bg p-bg-kitchen">🫙</div>
+          <span class="product-badge bestseller">⭐ Çok Satan</span>
+          <div class="product-actions">
+            <button class="btn-action" title="Favorilere Ekle">♡</button>
+            <button class="btn-action" title="Hızlı Bakış">👁</button>
+          </div>
+        </div>
+        <div class="product-body">
+          <div class="product-name">Halkalı Fırın Matı Silpat</div>
+          <div class="product-price-row">
+            <span class="price-current">₺95</span>
+          </div>
+          <button class="btn-cart" onclick="addToCart(this)">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M6 2L3 6v14a2 2 0 002 2h14a2 2 0 002-2V6l-3-4z"/><line x1="3" y1="6" x2="21" y2="6"/><path d="M16 10a4 4 0 01-8 0"/></svg>
+            Sepete Ekle
+          </button>
+        </div>
+      </div>
+
+      <div class="product-card reveal">
+        <div class="product-image">
+          <div class="product-image-bg p-bg-tool">🔧</div>
+          <span class="product-badge bestseller">⭐ Çok Satan</span>
+          <div class="product-actions">
+            <button class="btn-action" title="Favorilere Ekle">♡</button>
+            <button class="btn-action" title="Hızlı Bakış">👁</button>
+          </div>
+        </div>
+        <div class="product-body">
+          <div class="product-name">Bıçak Bileyici Klasik</div>
+          <div class="product-price-row">
+            <span class="price-current">₺55</span>
+          </div>
+          <button class="btn-cart" onclick="addToCart(this)">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M6 2L3 6v14a2 2 0 002 2h14a2 2 0 002-2V6l-3-4z"/><line x1="3" y1="6" x2="21" y2="6"/><path d="M16 10a4 4 0 01-8 0"/></svg>
+            Sepete Ekle
+          </button>
+        </div>
+      </div>
+
+      <div class="product-card reveal">
+        <div class="product-image">
+          <div class="product-image-bg p-bg-warm">🧴</div>
+          <span class="product-badge bestseller">⭐ Çok Satan</span>
+          <div class="product-actions">
+            <button class="btn-action" title="Favorilere Ekle">♡</button>
+            <button class="btn-action" title="Hızlı Bakış">👁</button>
+          </div>
+        </div>
+        <div class="product-body">
+          <div class="product-name">Cleanay Çok Amaçlı Çanta (Pembe)</div>
+          <div class="product-price-row">
+            <span class="price-current">₺120</span>
+          </div>
+          <button class="btn-cart" onclick="addToCart(this)">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M6 2L3 6v14a2 2 0 002 2h14a2 2 0 002-2V6l-3-4z"/><line x1="3" y1="6" x2="21" y2="6"/><path d="M16 10a4 4 0 01-8 0"/></svg>
+            Sepete Ekle
+          </button>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════════════════════════ FOOTER -->
+<footer>
+  <div class="footer-inner">
+    <div class="footer-brand">
+      <div class="footer-logo">
+        <div class="footer-logo-mark">F</div>
+        <span class="footer-logo-name">fidan's house</span>
+      </div>
+      <p class="footer-desc">
+        Evinizi daha güzel, yaşamınızı daha kolay kılacak kaliteli ev ürünlerini uygun fiyatlarla sunuyoruz. Her ürün, günlük hayatın vazgeçilmezi olarak seçilmiştir.
+      </p>
+      <div class="footer-social">
+        <a href="https://instagram.com/fidanshouse" class="social-btn" title="Instagram" target="_blank" rel="noopener">📷</a>
+        <a href="https://wa.me/905385120042" class="social-btn" title="WhatsApp" target="_blank" rel="noopener">💬</a>
+        <a href="mailto:info@fidanshouse.com" class="social-btn" title="E-posta">✉</a>
+      </div>
+    </div>
+
+    <div>
+      <div class="footer-col-title">Hızlı Bağlantılar</div>
+      <div class="footer-links">
+        <a href="#">Anasayfa</a>
+        <a href="#">Tüm Ürünler</a>
+        <a href="#">Çok Satanlar</a>
+        <a href="#">Yeni Gelenler</a>
+        <a href="#">İndirimli Ürünler</a>
+      </div>
+    </div>
+
+    <div>
+      <div class="footer-col-title">Kurumsal</div>
+      <div class="footer-links">
+        <a href="#">Hakkımızda</a>
+        <a href="#">İletişim</a>
+        <a href="#">Sipariş Takibi</a>
+        <a href="#">İade Koşulları</a>
+        <a href="#">Gizlilik Politikası</a>
+      </div>
+    </div>
+
+    <div class="footer-contact-col">
+      <div class="footer-col-title">İletişim</div>
+      <div class="footer-contact">
+        <div class="contact-item">
+          <div class="contact-icon">📞</div>
+          <div class="contact-text">
+            <div class="contact-label">Telefon</div>
+            <a href="tel:05385120042" class="contact-value">0 538 512 00 42</a>
+          </div>
+        </div>
+        <div class="contact-item">
+          <div class="contact-icon">✉</div>
+          <div class="contact-text">
+            <div class="contact-label">E-posta</div>
+            <a href="mailto:info@fidanshouse.com" class="contact-value">info@fidanshouse.com</a>
+          </div>
+        </div>
+        <div class="contact-item">
+          <div class="contact-icon">💬</div>
+          <div class="contact-text">
+            <div class="contact-label">WhatsApp</div>
+            <a href="https://wa.me/905385120042" class="contact-value" target="_blank" rel="noopener">0 538 512 00 42</a>
+          </div>
+        </div>
+        <div class="contact-item">
+          <div class="contact-icon">📷</div>
+          <div class="contact-text">
+            <div class="contact-label">Instagram</div>
+            <a href="https://instagram.com/fidanshouse" class="contact-value" target="_blank" rel="noopener">@fidanshouse</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div style="max-width:1280px;margin:0 auto;padding:0 24px;">
+    <div class="footer-bottom">
+      <span>© 2025 Fidan's House. Tüm hakları saklıdır.</span>
+      <div style="display:flex;gap:16px;">
+        <a href="#">Kullanım Koşulları</a>
+        <a href="#">Gizlilik Politikası</a>
+        <a href="#">Çerez Politikası</a>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<!-- Toast -->
+<div class="toast" id="toast">
+  <span class="toast-icon">🛒</span>
+  <span id="toastMsg">Ürün sepete eklendi!</span>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
